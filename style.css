@@ -1,0 +1,220 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #f0f4f8;
+  color: #2d3748;
+  min-height: 100vh;
+  padding: 20px 16px 40px;
+}
+
+.wrap { max-width: 420px; margin: 0 auto; }
+
+h2 {
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #718096;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.field { margin-bottom: 20px; }
+.field:last-child { margin-bottom: 0; }
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #718096;
+  margin-bottom: 8px;
+}
+
+.field input[type="number"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #2d3748;
+  font-size: 16px;
+  font-family: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.slider-row { display: flex; align-items: center; gap: 10px; }
+
+.slider-row input[type="range"] {
+  flex: 1;
+  -webkit-appearance: none;
+  height: 4px;
+  background: #cbd5e0;
+  border-radius: 2px;
+  outline: none;
+}
+
+.slider-row input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2b6cb0;
+  cursor: pointer;
+}
+
+.num-box {
+  width: 58px;
+  padding: 9px 8px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #2d3748;
+  font-size: 15px;
+  text-align: right;
+  font-family: inherit;
+}
+
+.slider-unit { font-size: 13px; color: #718096; white-space: nowrap; }
+
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  background: #2b6cb0;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: inherit;
+  letter-spacing: 0.03em;
+  box-shadow: 0 3px 8px rgba(43,108,176,0.35);
+}
+.btn-primary:active { background: #2c5282; }
+
+.btn-back {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  color: #718096;
+  border: 1px solid #cbd5e0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 18px;
+  font-family: inherit;
+}
+.btn-back:active { background: #f0f4f8; }
+
+/* 結果画面 */
+.merit-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 28px 20px;
+  margin-bottom: 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.merit-label {
+  font-size: 12px;
+  color: #718096;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+}
+
+.merit-value {
+  font-size: 52px;
+  font-weight: 700;
+  color: #276749;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.merit-value.red { color: #c53030; }
+
+.merit-sub {
+  font-size: 13px;
+  color: #718096;
+}
+
+.breakdown {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #f0f4f8;
+}
+.breakdown-row:last-child { border-bottom: none; }
+.breakdown-row span:first-child { color: #718096; }
+.breakdown-row span:last-child { font-weight: 600; color: #2d3748; }
+.breakdown-row.diff span:last-child { color: #276749; }
+.breakdown-row.diff.red span:last-child { color: #c53030; }
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f4f8;
+  font-size: 13px;
+}
+.summary-row:last-child { border-bottom: none; }
+.summary-row span:first-child { color: #718096; }
+.summary-row span:last-child { font-weight: 600; color: #2d3748; }
+
+.cta-box {
+  background: #ebf8ff;
+  border: 1px solid #bee3f8;
+  border-radius: 14px;
+  padding: 18px 20px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.cta-box p {
+  font-size: 14px;
+  color: #2b6cb0;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.note {
+  font-size: 11px;
+  color: #a0aec0;
+  text-align: center;
+  margin-top: 16px;
+  line-height: 1.7;
+}
+
+.hidden { display: none !important; }
