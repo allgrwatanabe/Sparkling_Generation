@@ -7,7 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var screenInput  = document.getElementById('screen-input');
   var screenResult = document.getElementById('screen-result');
 
-  // スライダー ↔ 数値入力の連動
+  // フィルター代：7,700円(税抜) × 1.1 × 2回 ÷ 12ヶ月 ≒ 1,412円/月
+  var FILTER_MONTHLY = Math.round(7700 * 1.1 * 2 / 12);
+  // ガス代：6,000円 ÷ 1,100本 ≒ 5.45円/本
+  var GAS_PER_BOTTLE = 6000 / 1100;
+
   rangeUsage.addEventListener('input', function () { numUsage.value = rangeUsage.value; });
   numUsage.addEventListener('input',   function () { rangeUsage.value = numUsage.value; });
 
@@ -20,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var price = parseFloat(bottlePrice.value) || 0;
 
     var bottleMonthly    = usage * price * 30;
-    var dispenserMonthly = (usage * 5.45 * 30) + 917;
+    var dispenserMonthly = (usage * GAS_PER_BOTTLE * 30) + FILTER_MONTHLY;
     var savings          = bottleMonthly - dispenserMonthly;
 
     document.getElementById('r-usage').textContent     = usage + ' 本/日';
