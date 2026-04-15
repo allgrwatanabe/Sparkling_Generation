@@ -16,7 +16,6 @@ h2 {
   text-align: center;
   color: #2d3748;
   margin-bottom: 18px;
-  letter-spacing: 0.02em;
 }
 
 .card {
@@ -94,7 +93,10 @@ h2 {
 
 .slider-unit { font-size: 13px; color: #718096; white-space: nowrap; }
 
-#customWrap { display: none; margin-top: 10px; }
+#customWrap {
+  display: none;
+  margin-top: 10px;
+}
 
 #customWrap input[type="number"] {
   width: 100%;
@@ -128,8 +130,8 @@ h2 {
   cursor: pointer;
   margin-top: 10px;
   font-family: inherit;
-  letter-spacing: 0.03em;
 }
+.btn-primary:active { background: #2c5282; }
 
 .btn-back {
   width: 100%;
@@ -154,8 +156,8 @@ h2 {
   font-size: 13px;
 }
 .summary-row:last-child { border-bottom: none; }
-.summary-row .slabel { color: #718096; }
-.summary-row .sval { font-weight: 600; color: #2d3748; }
+.slabel { color: #718096; }
+.sval { font-weight: 600; color: #2d3748; }
 
 .result-block {
   text-align: center;
@@ -169,7 +171,6 @@ h2 {
   color: #718096;
   margin-bottom: 8px;
   font-weight: 600;
-  letter-spacing: 0.03em;
 }
 
 .rvalue { font-size: 40px; font-weight: 700; line-height: 1.1; color: #2d3748; }
