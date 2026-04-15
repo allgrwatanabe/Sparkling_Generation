@@ -15,15 +15,8 @@ h2 {
   font-weight: 600;
   text-align: center;
   color: #2d3748;
-  margin-bottom: 6px;
-  letter-spacing: 0.02em;
-}
-
-.subtitle {
-  font-size: 12px;
-  color: #718096;
-  text-align: center;
   margin-bottom: 18px;
+  letter-spacing: 0.02em;
 }
 
 .card {
@@ -46,7 +39,8 @@ h2 {
   margin-bottom: 8px;
 }
 
-.field input[type="number"] {
+.field input[type="number"],
+.field select {
   width: 100%;
   padding: 12px 14px;
   border: 1px solid #cbd5e0;
@@ -57,6 +51,13 @@ h2 {
   font-family: inherit;
   appearance: none;
   -webkit-appearance: none;
+}
+
+.field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23718096' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
 }
 
 .slider-row { display: flex; align-items: center; gap: 10px; }
@@ -93,6 +94,28 @@ h2 {
 
 .slider-unit { font-size: 13px; color: #718096; white-space: nowrap; }
 
+#customWrap { display: none; margin-top: 10px; }
+
+#customWrap input[type="number"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #4299e1;
+  border-radius: 8px;
+  background: #ebf8ff;
+  color: #2d3748;
+  font-size: 16px;
+  font-family: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#customWrap input[type="number"].error {
+  border-color: #c53030;
+  background: #fff5f5;
+}
+
+.custom-hint { font-size: 11px; color: #a0aec0; margin-top: 5px; }
+
 .btn-primary {
   width: 100%;
   padding: 16px;
@@ -106,9 +129,7 @@ h2 {
   margin-top: 10px;
   font-family: inherit;
   letter-spacing: 0.03em;
-  box-shadow: 0 3px 8px rgba(43,108,176,0.35);
 }
-.btn-primary:active { background: #2c5282; }
 
 .btn-back {
   width: 100%;
@@ -123,64 +144,6 @@ h2 {
   margin-top: 18px;
   font-family: inherit;
 }
-.btn-back:active { background: #f0f4f8; }
-
-/* 結果画面 */
-.merit-card {
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  padding: 28px 20px;
-  margin-bottom: 16px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.merit-label {
-  font-size: 12px;
-  color: #718096;
-  font-weight: 600;
-  margin-bottom: 12px;
-  letter-spacing: 0.05em;
-}
-
-.merit-value {
-  font-size: 52px;
-  font-weight: 700;
-  color: #276749;
-  line-height: 1;
-  margin-bottom: 10px;
-}
-
-.merit-value.red { color: #c53030; }
-
-.merit-sub {
-  font-size: 13px;
-  color: #718096;
-}
-
-.breakdown {
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  padding: 16px 20px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.breakdown-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  font-size: 13px;
-  border-bottom: 1px solid #f0f4f8;
-}
-.breakdown-row:last-child { border-bottom: none; }
-.breakdown-row span:first-child { color: #718096; }
-.breakdown-row span:last-child { font-weight: 600; color: #2d3748; }
-.breakdown-row.diff span:last-child { color: #276749; }
-.breakdown-row.diff.red span:last-child { color: #c53030; }
 
 .summary-row {
   display: flex;
@@ -191,23 +154,27 @@ h2 {
   font-size: 13px;
 }
 .summary-row:last-child { border-bottom: none; }
-.summary-row span:first-child { color: #718096; }
-.summary-row span:last-child { font-weight: 600; color: #2d3748; }
+.summary-row .slabel { color: #718096; }
+.summary-row .sval { font-weight: 600; color: #2d3748; }
 
-.cta-box {
-  background: #ebf8ff;
-  border: 1px solid #bee3f8;
-  border-radius: 14px;
-  padding: 18px 20px;
+.result-block {
   text-align: center;
-  margin-bottom: 4px;
+  padding: 22px 0;
+  border-bottom: 1px solid #f0f4f8;
 }
-.cta-box p {
-  font-size: 14px;
-  color: #2b6cb0;
+.result-block:last-of-type { border-bottom: none; padding-bottom: 4px; }
+
+.rlabel {
+  font-size: 12px;
+  color: #718096;
+  margin-bottom: 8px;
   font-weight: 600;
-  line-height: 1.8;
+  letter-spacing: 0.03em;
 }
+
+.rvalue { font-size: 40px; font-weight: 700; line-height: 1.1; color: #2d3748; }
+.rvalue.green { color: #276749; }
+.rvalue.red   { color: #c53030; }
 
 .note {
   font-size: 11px;
